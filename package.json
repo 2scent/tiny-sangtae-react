@@ -1,8 +1,36 @@
 {
   "name": "@tiny-sangtae/react",
-  "private": true,
   "version": "0.0.0",
+  "description": "React integration for Tiny Sangtae.",
+  "keywords": [
+    "store",
+    "state",
+    "state manager",
+    "react",
+    "tiny-sangtae",
+    "sangtae"
+  ],
+  "author": "Lee Hyanggi <ad7549@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2scent/tiny-sangtae-react"
+  },
+  "homepage": "https://github.com/2scent/tiny-sangtae-react#readme",
+  "license": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/react.umd.cjs",
+  "module": "./dist/react.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react.js",
+      "require": "./dist/react.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,7 +38,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "@types/node": "^22.3.0",
     "@types/react": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "9.x",
     "globals": "^15.9.0",
     "prettier": "^3.3.3",
@@ -18,7 +48,8 @@
     "tiny-sangtae": "^0.0.2",
     "typescript": "^5.2.2",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "^4.0.2"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
